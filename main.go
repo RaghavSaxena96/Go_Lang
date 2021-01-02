@@ -1,20 +1,11 @@
 package main
 
-import "fmt"
-
 func main() {
 
-	var cards string = "Ace of Spades"
-	fmt.Println(cards)
+	card := newDeck()
 
-	card := deck{"Ace", "Books", "Cars", carder()}
+	hand, remaining := deal(card, 5)
 
-	card.print()
-}
-
-func carder() string {
-
-	card := "Ace of Spades"
-
-	return card
+	hand.print()
+	remaining.print()
 }
