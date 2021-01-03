@@ -2,10 +2,19 @@ package main
 
 func main() {
 
-	card := newDeck()
+	//card := newDeck()
 
-	hand, remaining := deal(card, 5)
+	//fmt.Println(card.toString())
 
-	hand.print()
-	remaining.print()
+	//card.saveToFile("my_cards")
+
+	cards := newDeckfromFile("my_cards")
+
+	cards.print()
+
+	//hand, remaining := deal(card, 5)
+
+	//hand.print()
+	//remaining.print()
+
 }
